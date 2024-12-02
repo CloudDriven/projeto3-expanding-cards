@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); /* Importação da fonte */
+
+* { /* Selector universal onde se aplica o estilo a todos os elementos da página  */
+  box-sizing: border-box;
+  
+}
+
+body { /* Configura o comportamento e o estilo do elemento body */
+  font-family: 'Muli', sans-serif; /* Define a fonte usada no corpo da página, o tipo genérico de fallback é sans-serif */
+  display: flex; /* Define o corpo da página como um container flexivel usando o layout flexbox */
+  align-items: center; /* Centraliza os elementos filhos verticalmente dentro do corpo da página */
+  justify-content: center; /* Centraliza os elementos filhos horizontalmente dentro do corpo da página */
+  height: 100vh; /* Define a altura do body como 100% da altura da janela de visualização (viewpor height vw) garante que o corpo ocupa toda a tela independemente do conteúdo */
+  overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites do corpo. Isso impede o scroll mesmo que o conteúdo exceda o tamanho da tela */
+  margin: 0; /* Remove as margens padrão do body. Garante que o layout ocupa toda a área disponivel, sem espaçamentos indesejados ao redor */
+}
+
+.container { /* Configura o estilo de um elemento com a classe .container */
+  display: flex; /* Define o corpo da página como um container flexivel usando o layout flexbox */
+  width: 90vw; /* Define a largura do container como 90% da largura da janela de visualização(viewport width vw) */
+}
+
+.panel { /* Configura um elemento com aparencia elegante e interatividade */
+  background-size: cover; /* Faz com que a imagem de fundo preencha todo o elemento, sem distorções, cortando partes da imagem se necessario */
+  background-position: center; /* Centraliza a imagem de fundo no elemento, tanto horizontal quanto verticalmente */
+  background-repeat: no-repeat; /* Impede que a imagem de fundo seja repetida, exibindo apenas uma instância dela  */
+  height: 80vh; /* Define a altura do painel como 80% de altura da janela de visualização (viewport height) */
+  border-radius: 50px; /* Aplica cantos arrendondados ao painel com um raio de 50 pixels, dando um visual mais suave e moderno */
+  color: #fff; /* Define a cor do texto como branco */
+  cursor: pointer; /* Altera o cursor do mouse para um icone de mão quando o painel é passado */
+  flex: 0.5; /* Configura o painel como um item flexivel com um fator de crescimento de 0.5 */
+  margin: 10px; /* Adiciona um espaçamento externo de 10 pixels em todos os lados do painel garantindo que ele não encoste diretamente noutros elementos e bordas */
+  position: relative; /* Define a posição do painel como relativa, permitindo a colocação de elementos filhos (com absolute) em relação ao painel, sem tirá-lo do fluxo normal do layout */
+  transition: all 700ms ease-in; /* Adiciona uma animação suave ao painel, com duração de 700ms, para mudanças em todas as propriedades que podem ser animadas.
+  O movimento segue o modelo ease-in que começa devagar e depois acelera */
+}
+
+.panel h3 { /* Este trecho de código estiliza o elemento <h3> dentro do painel com a classe .panel */
+  font-size: 24px; /* Define o tamanho da fonte para 24 pixels. Esse valor é geralmente usado para títulos ou subtítulos, garantindo que o texto seja legível, mas não muito grande */
+  position: absolute; /* Posiciona o <h3> de forma absoluta em relação ao container mais próximo que tenha position: relative, neste caso o prórpio .panel  */
+  bottom: 20px; /* Posiciona o texto da parte inferior do painel. Isso cria um efeito onde o título aparece próximo à borda inferior */
+  left: 20px; /* Posiciona o texto a 20 pixels da lateral esquerda do painel. Isso alinha o texto de forma consistente dentro do painel. */
+  margin: 0; /* Remove as margens padrão do elemento <h3>. Isso garante que o espaçamento seja controlado exclusivamente por bottom e left */
+  opacity: 0; /* Torna o texto invisivel inicialmente. A opacidade 0 significa que o elemento esta completamente transparente */
+}
+
+.panel.active { /* Configura o comportamento de um painel quando a classe active é adicionada  */
+  flex: 5; /* O painel recebe um fator de crescimento maior em comparação aos outros elementos que têm, por exemplo flex: 0.5. Isso significa que o painel expandirá cinco vezes
+  mais do que os outros painéis no mesmo container flexível */
+}
+
+.panel.active h3 { /* Este trecho estiliza o elemento <h3> dentro do painel quando o painel possui a classe active */
+  opacity: 1; /* Torna o <h3> completamente visível, ao definir opacidade para 1 (totalmente opaco). Inicialmente, conforme o estilo anterior (opacity: 0), o <h3>
+  estava invisível. Agora, ele será exibido ao ativar o painel */
+  transition: opacity 0.5s ease-in 0.4s; /* Configura uma transição suave para a opacidade. A transição ocorre ao mudar o valor de opacity.
+  0.5s é a duração da transição.
+  ease-in é a transição que começa lenta e acelera gradualmente.
+  0.4s é um atraso antes da transição começar*/
+}
+
+/* Este trecho de código utiliza media queries para criar um design responsivo que se ajusta a telas pequenas.*/
+@media (max-width: 480px) { /* Define um conjunto de estilos que será aplicado apenas quando a largura da janela ou do dispositivo for 480pixels ou menos*/
+  .container { /* Configura a largura container para 100% da largura da janela de visualização 100vw.
+    Este ajuste garante que o container ocupa toda a largura da tela em dispositivos pequenos.*/
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4), /* Seleciona especificamente o quarto e quinto painel dentro do container .panel. */
+  .panel:nth-of-type(5) {
+    display: none; /* Remove esses paineis de exibição, ocultando-os completamente */
+  }
+}

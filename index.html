@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- Declara que o documento segue o padrão HTML5 -->
+<html lang="en"> <!-- Inicia o documento e define o idioma como inglês -->
+  <head> <!-- O head contém metadados e links para recursos externos -->
+    <meta charset="UTF-8"/> <!-- Este elemento define o conjunto de caracteres que o documento deve usar para o UTF-8, inclui praticamente todos os caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" /> <!-- link para o ficheiro CSS o que vai estilizar o conteúdo -->
+    <title>Photo Slider</title> <!-- titulo da página -->
+  </head>
+
+  <body> <!-- Contém o conteúdo visível no navegador -->
+    <div class="container"> <!-- Agrupa as os paineis dentro de um container -->
+      <div class="panel active" style="background-image: url('https://scontent.fopo5-2.fna.fbcdn.net/v/t39.30808-6/316286857_5535611509900980_144141905669158754_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=1ZAH30g44tEQ7kNvgFknie8&_nc_zt=23&_nc_ht=scontent.fopo5-2.fna&_nc_gid=AOvEjBVDME-tg5Vw9v2v1LL&oh=00_AYCabvJMSqxgKiwzkLSCkERmK08k48ACriKJmpDawA_5OA&oe=674FE41F')">
+        <h3>Sunset Shot</h3>
+      </div>
+      <!-- Classe active define qual painel está ativo inicialmente, será manipulado com JavaScript ou CSS para destacar o painel atual -->
+      <!-- Cada painel contem: o plano de fundo definido pelo atributo style, usando URLs para carregar imagens, um titulo h3 exibido na imagem  -->
+
+      <div class="panel" style="background-image: url('https://scontent.fopo5-2.fna.fbcdn.net/v/t39.30808-6/453039812_7796201173841991_5595910287654022603_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_ohc=ZdTBzwhac10Q7kNvgEF0Hxd&_nc_zt=23&_nc_ht=scontent.fopo5-2.fna&_nc_gid=A0KiiUTSnl-X79h7hefxEfd&oh=00_AYCERHq0J5IdxAfoK5XLoG0UOyKyHAJW8sJz2EPk6O1G2A&oe=674FF67D')">
+        <h3>Art and Light</h3>
+      </div>
+      <!-- Cada painel contem: o plano de fundo definido pelo atributo style, usando URLs para carregar imagens, um titulo h3 exibido na imagem  -->
+
+      <div class="panel" style="background-image: url('https://scontent.fopo5-2.fna.fbcdn.net/v/t39.30808-6/450711881_7726453144150128_2060369058835426127_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_ohc=1N5Ivt6Y3qUQ7kNvgH87viF&_nc_zt=23&_nc_ht=scontent.fopo5-2.fna&_nc_gid=ANF_wxxr9WbY3iqlT4BSLPN&oh=00_AYBo2ttGO6m2-D5sHMFvb804zaiwLcsg7zfU_XhzBhykvQ&oe=67500129')">
+        <h3>Cars</h3>
+      </div>
+      <!-- Cada painel contem: o plano de fundo definido pelo atributo style, usando URLs para carregar imagens, um titulo h3 exibido na imagem  -->
+
+      <div class="panel" style="background-image: url('https://scontent.fopo5-2.fna.fbcdn.net/v/t39.30808-6/382777668_6580745185387602_2087366463025599318_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_ohc=uE8mB3CaG_oQ7kNvgHZi5K1&_nc_zt=23&_nc_ht=scontent.fopo5-2.fna&_nc_gid=AUueOVMoVw01QA9Wfa5SMnu&oh=00_AYAUm1ZANLMKRTIi8osGSKHXkz7Kz2Ce-8-aVp-UytK_hA&oe=6750000D')">
+        <h3>Nature</h3>
+      </div>
+      <!-- Cada painel contem: o plano de fundo definido pelo atributo style, usando URLs para carregar imagens, um titulo h3 exibido na imagem  -->
+
+      <div class="panel" style="background-image: url('https://scontent.fopo5-2.fna.fbcdn.net/v/t39.30808-6/405561714_6759090487553070_8174801223110435923_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_ohc=TKnuEobycaQQ7kNvgEhdmDU&_nc_zt=23&_nc_ht=scontent.fopo5-2.fna&_nc_gid=AGKdOFAp6PsaFmfZ_svG15T&oh=00_AYDhs_3_x8iJRvx8etM679PchlopqUe6wW1tKnkH5rq_Tw&oe=674FEED9')">
+        <h3>Vintage Shot</h3>
+      </div>
+      <!-- Cada painel contem: o plano de fundo definido pelo atributo style, usando URLs para carregar imagens, um titulo h3 exibido na imagem  -->
+
+    </div>
+
+    <!-- Importa um arquivo JavaScript que adiciona interatividade, como alternar entre paineis ou animar transiçoes -->
+    <script src="main.js"></script>
+  </body>
+</html>
